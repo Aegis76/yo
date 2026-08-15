@@ -3,19 +3,19 @@
 const memories = [
     // Specific countdown dates (15, 16, 17 August)
     { date: "2026-08-15", image: "WhatsApp Image 2026-08-04 at 11.15.24 PM.jpeg", title: "The Countdown Begins ❤️", message: "Every beautiful story has a beginning, and ours is my favorite." },
-    { date: "2026-08-16", image: "images/day2.jpg", title: "Another Beautiful Memory ✨", message: "Every moment with you becomes a memory I never want to forget." },
-    { date: "2026-08-17", image: "images/day3.jpg", title: "One More Sleep ❤️", message: "Tomorrow is your day, and I can't wait to celebrate you." },
+    { date: "2026-08-16", image: "https://github.com/Aegis76/yo/blob/main/20260608_194302.jpg?raw=true", title: "Another Beautiful Memory ✨", message: "Every moment with you becomes a memory I never want to forget." },
+    { date: "2026-08-17", image: "ihttps://github.com/Aegis76/yo/blob/main/20260608_194302.jpg?raw=true", title: "One More Sleep ❤️", message: "Tomorrow is your day, and I can't wait to celebrate you." },
 
     // Birthday entry (18 August)
-    { date: "2026-08-18", image: "WhatsApp Image 2026-08-04 at 11.15.24 PM.jpeg", title: "Happy Birthday, My Love 🎂", message: "Today is all about celebrating you — the most beautiful person in my world." },
+    { date: "2026-08-18", image: "https://github.com/Aegis76/yo/blob/main/20260609_163559.jpg?raw=true", title: "Happy Birthday, My Love 🎂", message: "Today is all about celebrating you — the most beautiful person in my world." },
 
     // Extra memories for gallery (no date – always displayed in gallery on birthday)
     { date: "", image: "https://github.com/Aegis76/yo/blob/main/IMG_20260602_074323_412.webp?raw=true", title: "Extra Memory 1 💖", message: "A little moment that means everything." },
-    { date: "", image: "images/extra2.jpg", title: "Extra Memory 2 💘", message: "Your love is my greatest adventure." },
-    { date: "", image: "images/extra3.jpg", title: "Extra Memory 3 💝", message: "With you, every day is a celebration." },
-    { date: "", image: "images/extra4.jpg", title: "Extra Memory 4 🌸", message: "You make my heart skip a beat." },
-    { date: "", image: "images/extra5.jpg", title: "Extra Memory 5 🦋", message: "Butterflies, every time I see you." },
-    { date: "", image: "images/extra6.jpg", title: "Extra Memory 6 ✨", message: "You are the magic in my life." },
+    { date: "", image: "https://github.com/Aegis76/yo/blob/main/20260602_184134.jpg?raw=true", title: "Extra Memory 2 💘", message: "Your love is my greatest adventure." },
+    { date: "", image: "https://github.com/Aegis76/yo/blob/main/20260608_180413.jpg?raw=true", title: "Extra Memory 3 💝", message: "With you, every day is a celebration." },
+    { date: "", image: "https://github.com/Aegis76/yo/blob/main/20260609_085803.jpg?raw=true", title: "Extra Memory 4 🌸", message: "You make my heart skip a beat." },
+    { date: "", image: "https://github.com/Aegis76/yo/blob/main/20260624_175552.jpg?raw=true", title: "Extra Memory 5 🦋", message: "Butterflies, every time I see you." },
+    { date: "", image: "https://github.com/Aegis76/yo/blob/main/WhatsApp%20Image%202026-08-04%20at%2011.15.24%20PM.jpeg?raw=true", title: "Extra Memory 6 ✨", message: "You are the magic in my life." },
 ];
 
 const MUSIC_URL = ""; // Optional: e.g., "audio/song.mp3"
