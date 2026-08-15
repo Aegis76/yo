@@ -236,7 +236,7 @@ body {
 .hero-title {
     font-size: 6rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #ff2d78 0%, #c9184a 100%);
+    background: white;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
