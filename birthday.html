@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ══════════════════════════════════════════════════════════
+    FIREWORKS CANVAS (Birthday Only)
+    ══════════════════════════════════════════════════════════ -->
+    <canvas id="fireworks-canvas"></canvas>
+
+    <!-- ══════════════════════════════════════════════════════════
+    BALLOONS CONTAINER
+    ══════════════════════════════════════════════════════════ -->
+    <div id="balloons-container" aria-hidden="true"></div>
+
+    <!-- ══════════════════════════════════════════════════════════
+    FLOATING HEARTS BACKGROUND
+    ══════════════════════════════════════════════════════════ -->
+    <div id="floating-hearts" aria-hidden="true"></div>
+
+    <!-- ══════════════════════════════════════════════════════════
+    MUSIC TOGGLE BUTTON
+    ══════════════════════════════════════════════════════════ -->
+    <button id="music-toggle" aria-label="Toggle music" title="Play music">
+        <svg id="music-icon-play" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3" fill="currentColor"/>
+        </svg>
+        <svg id="music-icon-pause" viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+            <rect x="6" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+            <rect x="14" y="4" width="4" height="16" rx="1" fill="currentColor"/>
+        </svg>
+        <span class="music-pulse"></span>
+    </button>
+
+    <!-- ══════════════════════════════════════════════════════════
+    MAIN CONTENT
+    ══════════════════════════════════════════════════════════ -->
+    <main id="main-content">
+
+        <!-- ── HERO SECTION ── -->
+        <section id="hero" class="section">
+            <div class="hero-content">
+                <div class="hero-badge">✨ A Special Surprise ✨</div>
+                <h1 class="hero-title">For My Love ❤️</h1>
+                <p class="hero-subtitle">Every day with you is a gift — but today, the countdown begins.</p>
+                <div class="hero-scroll-indicator">
+                    <span>Scroll down</span>
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── COUNTDOWN SECTION ── -->
+        <section id="countdown-section" class="section">
+            <div class="glass-card countdown-card">
+                <h2 class="section-title">⏳ Birthday Countdown</h2>
+                <p class="countdown-message" id="countdown-message">Counting every moment until your special day...</p>
+                <div class="countdown-timer" id="countdown-timer">
+                    <div class="time-unit">
+                        <span class="time-number" id="countdown-days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <span class="time-number" id="countdown-hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <span class="time-number" id="countdown-minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-separator">:</div>
+                    <div class="time-unit">
+                        <span class="time-number" id="countdown-seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+                <p class="countdown-target-date" id="countdown-target-date">18 August 2026</p>
+            </div>
+        </section>
+
+        <!-- ── FEATURED MEMORIES SECTION (Always Visible) ── -->
+        <section id="featured-memories" class="section">
+            <div class="glass-card featured-card">
+                <h2 class="section-title">Our Favorite Moments ❤️</h2>
+                <p class="featured-intro">A few of the countless reasons I adore you...</p>
+                <div class="featured-grid" id="featured-grid">
+                    <!-- Featured images injected by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ── DAILY PHOTO SECTION ── -->
+        <section id="daily-photo-section" class="section">
+            <div class="glass-card photo-card" id="daily-photo-card">
+                <div class="photo-frame" id="daily-photo-frame">
+                    <div class="photo-placeholder" id="daily-photo-placeholder" style="display:none;">
+                        <span class="placeholder-heart">❤️</span>
+                        <span class="placeholder-text">Memory loading...</span>
+                    </div>
+                    <img id="daily-photo-img" src="" alt="Memory photo" class="photo-img">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-grain"></div>
+                    <div class="photo-glow"></div>
+                </div>
+                <div class="photo-caption" id="daily-photo-caption">
+                    <p class="photo-date" id="daily-photo-date"></p>
+                    <h3 class="photo-title" id="daily-photo-title"></h3>
+                    <p class="photo-message" id="daily-photo-message"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── BIRTHDAY SECTION (AUG 18 ONLY) ── -->
+        <section id="birthday-section" class="section" style="display:none;">
+            <div class="glass-card birthday-hero-card">
+                <div class="birthday-photo-frame" id="birthday-photo-frame">
+                    <div class="photo-placeholder" id="birthday-photo-placeholder" style="display:none;">
+                        <span class="placeholder-heart">❤️</span>
+                        <span class="placeholder-text">Memory loading...</span>
+                    </div>
+                    <img id="birthday-photo-img" src="" alt="Birthday memory" class="photo-img birthday-img">
+                    <div class="photo-overlay"></div>
+                    <div class="photo-grain"></div>
+                    <div class="birthday-photo-glow"></div>
+                    <div class="birthday-heart-particles" id="birthday-heart-particles"></div>
+                </div>
+                <div class="birthday-caption">
+                    <h1 class="birthday-title">🎂 Happy Birthday, My Love! 🎂</h1>
+                    <p class="birthday-message" id="birthday-message">Today is all about celebrating you — the most beautiful person in my world.</p>
+                    <div class="birthday-date-badge">18 August 2026 ❤️</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── REASONS I LOVE YOU SECTION (Always Visible) ── -->
+        <section id="reasons-section" class="section">
+            <div class="glass-card reasons-card">
+                <h2 class="section-title">💖 Reasons I Love You</h2>
+                <div class="reasons-list">
+                    <ul>
+                        <li>Your smile that lights up my darkest days.</li>
+                        <li>The way you laugh at my silly jokes.</li>
+                        <li>Your kindness that touches everyone around you.</li>
+                        <li>How you always believe in me, even when I doubt myself.</li>
+                        <li>Your warmth that feels like home.</li>
+                        <li>The way your eyes sparkle when you talk about your dreams.</li>
+                        <li>Your strength that inspires me every day.</li>
+                        <li>How you make ordinary moments magical.</li>
+                        <li>Your gentle heart that loves unconditionally.</li>
+                        <li>Because you are my today, my tomorrow, and my forever.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── GALLERY SECTION (AUG 18 ONLY) ── -->
+        <section id="gallery-section" class="section" style="display:none;">
+            <div class="glass-card gallery-card">
+                <h2 class="section-title">Our Beautiful Memories ❤️</h2>
+                <p class="gallery-intro">Every single moment with you is precious. Here are some of our favorites...</p>
+                <div class="gallery-masonry" id="gallery-masonry">
+                    <!-- Gallery items injected by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ── LOVE LETTER SECTION ── -->
+        <section id="love-letter-section" class="section">
+            <div class="glass-card love-letter-card">
+                <h2 class="section-title">💌 A Letter From My Heart</h2>
+                <div class="love-letter-content" id="love-letter-content">
+                    <p>My dearest love,</p>
+                    <p>Every single day with you feels like a beautiful dream I never want to wake up from. Your smile lights up my world, your laugh is my favorite melody, and your love is the greatest gift I've ever received.</p>
+                    <p>As we count down to your special day, I want you to know — you are the most incredible person I've ever met. You make ordinary moments extraordinary, and you make my life infinitely better just by being in it.</p>
+                    <p>This little website is my way of celebrating you — every day, every memory, every reason why I love you.</p>
+                    <p>I still remember the first time I saw you; my heart knew you were someone special. Since then, every moment with you has become a treasured memory. You've shown me what true love feels like, and I am forever grateful.</p>
+                    <p>On this special day, I want to promise you that I will always be by your side, through every joy and every challenge. You are my best friend, my soulmate, and my greatest adventure.</p>
+                    <p>Happy Birthday, my love. May all your dreams come true, and may our journey together be filled with endless love and laughter.</p>
+                    <p class="love-letter-signature">Forever yours,<br>Your Love ❤️</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── FOOTER ── -->
+        <footer id="footer" class="footer">
+            <p>Made with ❤️ just for you</p>
+            <p class="footer-small">Every day with you is a celebration</p>
+        </footer>
+
+    </main>
+
+    <!-- ══════════════════════════════════════════════════════════
+    LIGHTBOX OVERLAY
+    ══════════════════════════════════════════════════════════ -->
+    <div id="lightbox" class="lightbox-overlay" style="display:none;" role="dialog" aria-modal="true" aria-label="Photo viewer">
+        <button id="lightbox-close" class="lightbox-close" aria-label="Close">✕</button>
+        <button id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="Previous photo">‹</button>
+        <button id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Next photo">›</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Memory photo" class="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption">
+                <p class="lightbox-date" id="lightbox-date"></p>
+                <h3 class="lightbox-title" id="lightbox-title"></h3>
+                <p class="lightbox-message" id="lightbox-message"></p>
+            </div>
+        </div>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
