@@ -10,7 +10,7 @@ const memories = [
     { date: "2026-08-18", image: "WhatsApp Image 2026-08-04 at 11.15.24 PM.jpeg", title: "Happy Birthday, My Love 🎂", message: "Today is all about celebrating you — the most beautiful person in my world." },
 
     // Extra memories for gallery (no date – always displayed in gallery on birthday)
-    { date: "", image: "images/extra1.jpg", title: "Extra Memory 1 💖", message: "A little moment that means everything." },
+    { date: "", image: "https://github.com/Aegis76/yo/blob/main/IMG_20260602_074323_412.webp?raw=true", title: "Extra Memory 1 💖", message: "A little moment that means everything." },
     { date: "", image: "images/extra2.jpg", title: "Extra Memory 2 💘", message: "Your love is my greatest adventure." },
     { date: "", image: "images/extra3.jpg", title: "Extra Memory 3 💝", message: "With you, every day is a celebration." },
     { date: "", image: "images/extra4.jpg", title: "Extra Memory 4 🌸", message: "You make my heart skip a beat." },
