@@ -18,7 +18,7 @@ const memories = [
     { date: "", image: "https://github.com/Aegis76/yo/blob/main/WhatsApp%20Image%202026-08-04%20at%2011.15.24%20PM.jpeg?raw=true", title: "Extra Memory 6 ✨", message: "You are the magic in my life." },
 ];
 
-const MUSIC_URL = "ID3"; // Optional: e.g., "audio/song.mp3"
+const MUSIC_URL = "justin-bieber_favorite-girl.mp3"; // Optional: e.g., "audio/song.mp3"
 
 // ─── DOM Elements ───
 const dailySection = document.getElementById('daily-photo-section');
